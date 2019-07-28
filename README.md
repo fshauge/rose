@@ -4,19 +4,17 @@ A Kotlin library for making user interfaces
 # Experiments
 
 ````kotlin
-fun app(): Render = flexRow(
-    flexColumn(
-        box(Color.RED),
-        box(Color.GREEN)
-    ),
-    flexColumn(
-        box(Color.BLUE),
-        box(Color.YELLOW)
-    )
-)
-
-fun main() {
-    Container(app()).run()
+fun app() = root {
+    flex(direction = ROW) {
+        flex(direction = COLUMN) {
+            box(Color.RED)
+            box(Color.GREEN)
+        }
+        flex(direction = COLUMN) {
+            box(Color.BLUE)
+            box(Color.YELLOW)
+        }
+    }
 }
 ````
 
