@@ -3,6 +3,7 @@ package io.rose.experiments
 import io.rose.BaseElement
 import io.rose.Bounds
 import io.rose.Element
+import io.rose.initElement
 import java.awt.Color
 import java.awt.Graphics2D
 
@@ -18,6 +19,4 @@ class Box(val color: Color) : BaseElement() {
     }
 }
 
-fun Element.box(color: Color) {
-    children.add(Box(color))
-}
+fun Element.box(color: Color) = initElement(Box(color))

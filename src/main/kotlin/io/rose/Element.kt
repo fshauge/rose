@@ -19,4 +19,7 @@ open class BaseElement : Element {
 fun <T : Element> Element.initElement(element: T, init: T.() -> Unit) =
     children.add(element.apply(init))
 
+fun <T : Element> Element.initElement(element: T) =
+    children.add(element)
+
 fun root(init: Element.() -> Unit): Element = BaseElement().apply(init)
