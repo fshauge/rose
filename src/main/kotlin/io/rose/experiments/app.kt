@@ -1,15 +1,12 @@
 package io.rose.experiments
 
-import io.rose.Render
+import io.rose.experiments.FlexDirection.ROW
+import io.rose.root
 import java.awt.Color
 
-fun app(): Render = flexRow(
-    flexColumn(
-        box(Color.RED),
+fun app() = root {
+    flex(direction = ROW) {
+        box(Color.BLUE)
         box(Color.GREEN)
-    ),
-    flexColumn(
-        box(Color.BLUE),
-        box(Color.YELLOW)
-    )
-)
+    }
+}

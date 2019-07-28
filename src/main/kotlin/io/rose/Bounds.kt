@@ -1,8 +1,8 @@
 package io.rose
 
 data class Bounds(
-    val x: Int,
-    val y: Int,
-    val width: Int,
-    val height: Int
+    val x: Double,
+    val y: Double,
+    val w: Double,
+    val h: Double
 )
